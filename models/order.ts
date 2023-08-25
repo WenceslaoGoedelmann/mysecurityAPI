@@ -64,6 +64,10 @@ const OrderSchema = new Schema<IOrder>({
             title: {
                 type:String,
                 required: true
+            },
+            img: {
+                type:String,
+                required: true
             }
         }],
         required: true
