@@ -47,7 +47,7 @@ const OrderSchema = new Schema<IOrder>({
         type:[{
             desc: {
                 type: String,
-                required: true
+                required: false
             },
             id: {
                 type: Number,
