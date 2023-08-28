@@ -5,6 +5,9 @@ import { ROLES } from "../helpers/constants";
 export interface IUser {
     nombre: string;
     email: string;
+    cellphone: number;
+    location: string;
+    address: string;
     password: string;
     rol?: string;
     code?: string;
@@ -19,6 +22,18 @@ const UserSchema = new Schema<IUser>({
     email:{
         type:String,
         required: [true, "El correo es obgligatorio"]
+    },
+    cellphone:{
+        type:Number,
+        required: [true, "El celular es obgligatorio"]
+    },
+    location:{
+        type:String,
+        required: [true, "La ciudad es obgligatoria"]
+    },
+    address:{
+        type:String,
+        required: [true, "La direccion es obgligatoria"]
     },
     password:{
         type:String,

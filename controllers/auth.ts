@@ -8,9 +8,9 @@ import generarJWT from "../helpers/generarJWT";
 
 export const register =async (req:Request, res:Response):Promise<void> => {
 
-    const {nombre, email, password }: IUser = req.body
+    const {nombre, email, password,cellphone,location,address }: IUser = req.body
     
-    const usuario = new Usuario({nombre, email, password })
+    const usuario = new Usuario({nombre, email, password,cellphone,location,address })
 
     const salt = bcryptjs.genSaltSync()
 
